@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    font-family: 'Poppins',sans-serif;
+    background-color: var(--clr-white);
+}
+
+:root{
+    --clr-black:#252525;
+    --clr-white:#fff;
+}
+.todo__container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3rem 0rem;
+    max-width: 1100px;
+    width: 90%;
+    position: relative;
+}
+.date__time{
+    position: absolute;
+    top: .5rem;
+    left: 0;
+    display: flex;
+    gap: 1rem;
+}
+.date__time p:first-child{
+    border-right: 2px solid var(--clr-black);
+    padding-right: .8rem;
+
+}
+h2{
+    font-size: 5rem;
+    font-family: 'Caveat';
+    color: var(--clr-black);
+}
+.input__area{
+    margin-top: 3rem;
+    width: 100%;
+    min-height: 3rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    position: relative;
+}
+input{
+    width: 75%;
+    border: 2px solid var(--clr-black);
+    border-radius: 2px;
+    padding:  .5rem;
+    font-size: 1.1rem;
+    overflow-x: scroll;    
+    outline: none;
+}
+
+.todo__btn{
+    width: 25%;
+    padding: .8rem 0;
+    border: none;
+    outline: none;
+    background-color: var(--clr-black);
+    color: var(--clr-white);
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1rem;
+}
+.error{
+    position: absolute;
+    top :3.2rem;
+    left: .5rem;
+    color: red;
+    font-size: .8rem;
+    display: none;
+}
+.error.active{
+    display: block;
+}
+
+.output__area{
+    margin-top: 2rem;
+    width: 100%;
+}
+.todo__value{
+    width: 100%;
+    color: var(--clr-white);
+    word-break:break-all;
+}
+.todo__value.active{
+    text-decoration: line-through;
+    opacity: .5;
+}
+.date,.time{
+    color: var(--clr-black);
+}
+.todoo{
+    margin-top: 1rem;
+    border-radius: 8px;
+    padding: .8rem;
+    background-color: var(--clr-black);
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+.func__btns{
+    color: var(--clr-white);
+    display: flex;
+}
+.completed{
+    text-decoration: line-through;
+    opacity: 0.5;
+}
+.i{
+    margin: 0 0.35rem;
+    font-size: 2rem;
+    cursor: pointer;
+    transition: all .3s ease;
+    outline: none;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    display: flex;
+    align-items: center;
+}
+.i:first-child:hover{
+    color: rgb(21, 242, 65);
+}
+.i:last-child{
+    font-size: 1.5rem;
+
+}
+.i:last-child:hover{
+    color: rgb(242, 21, 87);
+}
+ 
+
+
+@media screen and (max-width:400px) {
+    html{
+        font-size: 95%;
+    }
+    h2{
+        font-size: 4rem;
+        margin-top: .8rem;
+    }
+    .input__area{
+        flex-direction: column;
+        margin-top: 2rem;
+    }
+    input{
+        width: 100%;
+        min-height: 3rem;
+    }
+    .todo__btn{
+        width: 100%;
+    }
+    .error{
+        top: -1.4rem;
+        left: 0.2rem;
+    }
+}

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo</title>
+    <!-- css -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- js -->
+    <script src="app.js" defer></script>
+
+    <!-- icons scout link -->
+    <link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
+    />
+  </head>
+  <body>
+    <main class="todo__container">
+        <div class="date__time">
+            <p class="date"></p>
+            <p class="time"></p>
+        </div>
+      <h2>My Todo</h2>
+      <form class="input__area">
+        <input type="text" name="text-area" class="text__input" autocomplete="off" placeholder="Type your tasks here" />
+        <button class="todo__btn" type="submit">Add new</button>
+        <p class="error">Please type something to add</p>
+      </form>
+      <div class="output__area">
+      </div>
+    </main>
+  </body>
+</html>
